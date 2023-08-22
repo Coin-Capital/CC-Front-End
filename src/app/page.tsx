@@ -1,5 +1,6 @@
 import SideBar from "@/components/SideBar";
 function MyApp() {
+  
   return (
       <div>
         <SideBar />
