@@ -1,5 +1,7 @@
 'use client'
 
+import Profile from './MainBox'
+
 import {
   IconButton,
   Avatar,
@@ -21,6 +23,7 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
+  Image,
 } from '@chakra-ui/react'
 import {
   FiHome,
@@ -33,6 +36,7 @@ import {
   FiChevronDown,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
+import MainBox from './MainBox'
 
 interface LinkItemProps {
   name: string
@@ -71,9 +75,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Logo
-        </Text>
+        <Image src="/Logo.png" w='75px' alt='logo'/>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
@@ -85,7 +87,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   )
 }
 
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ( { icon, children, ...rest }: NavItemProps) => {
   return (
     <Box
       as="a"
@@ -100,7 +102,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
+          bg: 'purple.400',
           color: 'white',
         }}
         {...rest}>
@@ -140,13 +142,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         icon={<FiMenu />}
       />
 
-      <Text
-        display={{ base: 'flex', md: 'none' }}
-        fontSize="2xl"
-        fontFamily="monospace"
-        fontWeight="bold">
-        Logo
-      </Text>
+      <Avatar src='/Logo.png' />
 
       <HStack spacing={{ base: '0', md: '6' }}>
         <IconButton size="lg" variant="ghost" aria-label="open menu" icon={<FiBell />} />
@@ -194,7 +190,7 @@ const SidebarWithHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box minH="100vh" bg={useColorModeValue('slate.100', 'slate.900')}>
       <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
       <Drawer
         isOpen={isOpen}
@@ -212,6 +208,7 @@ const SidebarWithHeader = () => {
       <Box ml={{ base: 0, md: 60 }} p="4">
         {/* Content */}
       </Box>
+      <MainBox />
     </Box>
   )
 }
