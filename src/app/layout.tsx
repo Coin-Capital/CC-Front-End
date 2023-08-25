@@ -1,6 +1,7 @@
 'use client'
 import { ChakraProvider } from '@chakra-ui/react'
 
+
 import { Inter } from 'next/font/google'
 import './globals.css'
 
