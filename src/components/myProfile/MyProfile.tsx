@@ -47,7 +47,7 @@ function MyProfile() {
                 textColor="black"
                 _focus={{ backgroundColor: "purple.700", color: "white" }}
                 onClick={() => {
-                  setActiveTab(1), console.log(activeTab);
+                  setActiveTab(1);
                 }}
               >
                 Visão geral
@@ -57,7 +57,7 @@ function MyProfile() {
                 textColor="black"
                 _focus={{ backgroundColor: "purple.700", color: "white" }}
                 onClick={() => {
-                  setActiveTab(2), console.log(activeTab);
+                  setActiveTab(2);
                 }}
               >
                 Meu cadastro
@@ -67,7 +67,7 @@ function MyProfile() {
                 textColor="black"
                 _focus={{ backgroundColor: "purple.700", color: "white" }}
                 onClick={() => {
-                  setActiveTab(3), console.log(activeTab);
+                  setActiveTab(3);
                 }}
               >
                 Privacidade

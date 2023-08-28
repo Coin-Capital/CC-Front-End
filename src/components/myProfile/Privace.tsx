@@ -64,7 +64,7 @@ function Privace() {
             _hover={{ backgroundColor: "red.700" }}
             mt="32px"
           >
-            Excluir cadastro ?
+            Excluir cadastro
           </Button>
         </Box>
       </Flex>

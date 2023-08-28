@@ -1,11 +1,10 @@
 "use client";
 
 import MyProfile from "./myProfile/MyProfile";
-import MyRegister from "./myProfile/MyRegister";
 
-import React, { use, useState } from "react";
+import React from "react";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 function MainBox() {
   return (
