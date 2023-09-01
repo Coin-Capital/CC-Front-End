@@ -25,34 +25,38 @@ function Page() {
         <Text color="white" fontSize="4xl" fontFamily="-moz-initial">
           Coin Capital
         </Text>
-        <Link href="/auth">
-          <Button mr="32px" _hover={{ backgroundColor: "yellow.200" }}>
-            Iniciar Sessão
-          </Button>
-        </Link>
+        <Button mr="32px" _hover={{ backgroundColor: "yellow.200" }}>
+          <Link href="/auth"> Iniciar Sessão</Link>
+        </Button>
       </Flex>
       <Flex
         justifyContent="center"
         w="100%"
         h="calc(100vh - 5rem)"
         bgGradient="linear(to-l, purple.400, purple.600 )"
+        alignItems="center"
+        alignContent="center"
       >
         <Flex flexDirection="column">
           <Text
-            mt="32px"
+            mt={["0px", "0px", "0px", "32px"]}
             color="white"
-            fontSize="6xl"
+            fontSize={["4xl", "4xl", "4xl", "6xl"]}
             textAlign="start"
             fontFamily="body"
             w="30rem"
           >
             As melhores Soluções para seu dinheiro
           </Text>
-          <Text mt="32px">
+          <Text mt="32px" fontSize={["xl", "xl", "xl", "md"]}>
             Provando excelencia e qualidade em primeiro lugar
           </Text>
           <Link href="/auth">
-            <Button mt="32px" _hover={{ backgroundColor: "yellow.200" }}>
+            <Button
+              mt="32px"
+              _hover={{ backgroundColor: "yellow.200" }}
+              ml={["7rem"]}
+            >
               Registre-se agora
             </Button>
           </Link>
@@ -62,6 +66,7 @@ function Page() {
             src="/happygirl.png"
             alt="Pessoa"
             h="50rem"
+            w={["0px", "0px", "0rem", "35rem"]}
             alignSelf="end"
           ></Image>
         </Flex>

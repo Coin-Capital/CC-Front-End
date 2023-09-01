@@ -13,15 +13,18 @@ function Privace() {
       flexDirection="column"
       backgroundColor="gray.100"
       padding="32px"
+      alignItems={["center", "center", "center", "center"]}
     >
-      <Flex>
+      <Flex flexDirection={["column", "column", "column"]}>
         <Box
-          w="45rem"
+          w={["", "", "25rem", "43rem"]}
           display="flex"
           flexDirection="column"
           padding="32px"
           backgroundColor="white"
           borderRadius="24px"
+          ml={["0px", "0px", "4rem", "2rem"]}
+          alignSelf="center"
         >
           <Text fontSize="2xl" fontFamily="system-ui" fontWeight="bold">
             Começar do zero
@@ -41,13 +44,15 @@ function Privace() {
           </Button>
         </Box>
         <Box
-          w="45rem"
-          ml="32px"
+          w={["", "", "25rem", "43rem"]}
+          mt={["32px", "32px", "32px", "32px"]}
+          ml={["0px", "0px", "4rem", "2rem"]}
           display="flex"
           flexDirection="column"
           padding="32px"
           backgroundColor="white"
           borderRadius="24px"
+          alignSelf="center"
         >
           <Text fontSize="2xl" fontFamily="system-ui" fontWeight="bold">
             Excluir Cadastro
@@ -67,33 +72,34 @@ function Privace() {
             Excluir cadastro
           </Button>
         </Box>
-      </Flex>
-      <Box
-        display="flex"
-        w="45rem"
-        flexDirection="column"
-        mt="32px"
-        padding="32px"
-        backgroundColor="white"
-        borderRadius="24px"
-      >
-        <Text fontSize="2xl" fontFamily="system-ui" fontWeight="bold">
-          Exportar Dados
-        </Text>
-        <Text mt="16px">
-          Você pode visualizar ou baixar suas informações a qualquer momento.
-          Clique abaixo para exportar seus dados financeiros.
-        </Text>
-        <Button
-          backgroundColor="pink.900"
-          color="White"
+        <Box
+          display="flex"
+          w={["", "", "25rem", "43rem"]}
+          flexDirection="column"
+          mt={["32px", "32px", "32px", "32px"]}
+          padding="32px"
+          backgroundColor="white"
           borderRadius="24px"
-          _hover={{ backgroundColor: "purple" }}
-          mt="32px"
+          ml={["0px", "0px", "5rem", "2rem"]}
         >
-          Exportar Dados
-        </Button>
-      </Box>
+          <Text fontSize="2xl" fontFamily="system-ui" fontWeight="bold">
+            Exportar Dados
+          </Text>
+          <Text mt="16px">
+            Você pode visualizar ou baixar suas informações a qualquer momento.
+            Clique abaixo para exportar seus dados financeiros.
+          </Text>
+          <Button
+            backgroundColor="pink.900"
+            color="White"
+            borderRadius="24px"
+            _hover={{ backgroundColor: "purple" }}
+            mt="32px"
+          >
+            Exportar Dados
+          </Button>
+        </Box>
+      </Flex>
     </Box>
   );
 }

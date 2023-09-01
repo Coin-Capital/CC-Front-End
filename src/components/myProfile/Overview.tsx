@@ -20,14 +20,27 @@ function Overview() {
       backgroundColor="gray.100"
       borderRadius="32px"
       pb="16px"
+      ml={["0px", "0xp", "0px", "3rem"]}
     >
-      <Flex ml="42px" mt="32px" flexDirection="column">
+      <Flex
+        ml={["3rem", "3rem", "0px", "3rem"]}
+        mt="32px"
+        flexDirection="column"
+      >
         <Box>
-          <Text fontSize="xl" fontWeight="bold">
+          <Text
+            fontSize="xl"
+            fontWeight="bold"
+            ml={["0px", "0px", "8rem", "0px"]}
+          >
             Dados da conta
           </Text>
         </Box>
-        <Text fontSize="14px" marginTop="32px">
+        <Text
+          fontSize="14px"
+          marginTop="32px"
+          ml={["0px", "0px", "8rem", "0px"]}
+        >
           Nome
         </Text>
         <Input
@@ -45,8 +58,13 @@ function Overview() {
           borderRadius="0px"
           _hover={{ borderColor: "black" }}
           value={user.name}
+          ml={["0px", "0px", "8rem", "0px"]}
         ></Input>
-        <Text fontSize="14px" marginTop="32px">
+        <Text
+          fontSize="14px"
+          marginTop="32px"
+          ml={["0px", "0px", "8rem", "0px"]}
+        >
           E-mail
         </Text>
         <Input
@@ -64,8 +82,13 @@ function Overview() {
           borderRadius="0px"
           _hover={{ borderColor: "black" }}
           value={user.email}
+          ml={["0px", "0px", "8rem", "0px"]}
         ></Input>
-        <Text fontSize="14px" marginTop="32px">
+        <Text
+          fontSize="14px"
+          marginTop="32px"
+          ml={["0px", "0px", "8rem", "0px"]}
+        >
           Objetivo financeiro
         </Text>
         <Select
@@ -86,6 +109,7 @@ function Overview() {
             borderBottomColor: "purple",
             _hover: { borderColor: "purple" },
           }}
+          ml={["0px", "0px", "8rem", "0px"]}
         >
           <option value="option1">Sair das dividas</option>
           <option value="option2">Começar a economizar</option>
@@ -93,8 +117,18 @@ function Overview() {
           <option value="option4">Otimizar investimentos</option>
         </Select>
       </Flex>
-      <Box boxSize="sm" display="flex" alignItems="center">
-        <Image src={`${user.perfImg}`} alt="imagem de perfil" />
+      <Box
+        flexDirection="row-reverse"
+        boxSize="sm"
+        display="flex"
+        justifyContent={["", "", "", "start"]}
+        alignItems={["start", "start", "start", "start"]}
+      >
+        <Image
+          w={["0px", "10rem", "10rem", "25rem"]}
+          src={`${user.perfImg}`}
+          alt="imagem de perfil"
+        />
       </Box>
     </Box>
   );

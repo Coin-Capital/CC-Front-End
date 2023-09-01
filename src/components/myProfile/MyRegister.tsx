@@ -19,10 +19,14 @@ function MyRegister() {
       backgroundColor="gray.100"
       borderRadius="32px"
       justifyContent="space-evenly"
+      ml={["0px", "0px", "2rem", "0px", "0px"]}
     >
-      <Box pb="32px" display="flex">
-        <Box display="flex" flexDirection="column">
-          <Box mt="32px" w="full"></Box>
+      <Box
+        pb="32px"
+        display="flex"
+        flexDirection={["column", "column", "column", "column"]}
+      >
+        <Box display="flex" flexDirection="column" ml="40px">
           <Text fontSize="xl" fontWeight="bold">
             Meus Dados
           </Text>
@@ -31,7 +35,7 @@ function MyRegister() {
           </Text>
           <Input
             mt="16px"
-            w="auto"
+            w="25rem"
             border="none"
             borderBottom="2px"
             borderBottomColor="gray.600"
@@ -46,29 +50,11 @@ function MyRegister() {
             value={user.name}
           ></Input>
           <Text fontSize="14px" marginTop="32px">
-            Como você gostaria de ser chamado ?
-          </Text>
-          <Input
-            mt="16px"
-            w="auto"
-            border="none"
-            borderBottom="2px"
-            borderBottomColor="gray.600"
-            _focusVisible={{
-              border: "none",
-              borderBottom: "2px",
-              borderBottomColor: "purple",
-              _hover: { borderColor: "purple" },
-            }}
-            borderRadius="0px"
-            _hover={{ borderColor: "black" }}
-          ></Input>
-          <Text fontSize="14px" marginTop="32px">
             E-mail
           </Text>
           <Input
             mt="16px"
-            w="auto"
+            w="25rem"
             border="none"
             borderBottom="2px"
             borderBottomColor="gray.600"
@@ -87,7 +73,7 @@ function MyRegister() {
           </Text>
           <Input
             mt="16px"
-            w="auto"
+            w="25rem"
             border="none"
             borderBottom="2px"
             borderBottomColor="gray.600"
@@ -107,7 +93,7 @@ function MyRegister() {
           </Text>
           <Input
             mt="16px"
-            w="auto"
+            w="25rem"
             border="none"
             borderBottom="2px"
             borderBottomColor="gray.600"

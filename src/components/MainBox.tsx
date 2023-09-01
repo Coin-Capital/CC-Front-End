@@ -15,7 +15,7 @@ function MainBox() {
         w="screen"
         h="50rem"
         mr="5%"
-        ml="17%"
+        ml={["5%", "5%", "17%", "17%"]}
         color={"slate"}
       >
         <MyProfile />

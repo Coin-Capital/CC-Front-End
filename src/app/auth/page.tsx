@@ -15,14 +15,25 @@ function Page() {
         w="screen"
         h="auto"
         justifyContent="center"
-        mt="5%"
+        mt="12%"
         alignItems="center"
+        direction={["column", "column", "column", "row"]}
       >
         <Flex flexDirection="column" w="20rem">
-          <Text w="20rem" textAlign="center" fontSize="2xl" fontWeight="bold">
+          <Text
+            w="20rem"
+            textAlign="center"
+            fontSize={["xl", "xl", "xl", "2xl"]}
+            fontWeight="bold"
+          >
             Hora de transformar suas finanças com a Coin Capital
           </Text>
-          <Image src="/Logo.png" alt="Logo" w="355px" />
+          <Image
+            src="/Logo.png"
+            ml={["65px", "65px", "65px", "0px"]}
+            alt="Logo"
+            w={["200px", "200px", "200px", "355px"]}
+          />
           <Text w="20rem" textAlign="center">
             Seu patrimonio sobre seu controle, e com quem entende de finanças
           </Text>
@@ -35,7 +46,10 @@ function Page() {
           ml="20rem"
         >
           <Flex w="100%" justifyContent="space-evenly" h="auto">
-            <Tabs>
+            <Tabs
+              mr={["18rem", "18rem", "18rem"]}
+              mt={["4rem", "4rem", "4rem"]}
+            >
               <TabList border="none">
                 <Tab
                   _hover={{
@@ -80,8 +94,12 @@ function Page() {
               </TabList>
             </Tabs>
           </Flex>
-          <Flex>{focus === 1 ? <Login /> : null}</Flex>
-          <Flex>{focus === 2 ? <Register /> : null}</Flex>
+          <Flex mr={["18rem", "18rem", "18rem"]}>
+            {focus === 1 ? <Login /> : null}
+          </Flex>
+          <Flex mr={["18rem", "18rem", "18rem"]}>
+            {focus === 2 ? <Register /> : null}
+          </Flex>
         </Flex>
       </Flex>
     </Box>

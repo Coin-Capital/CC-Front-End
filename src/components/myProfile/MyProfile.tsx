@@ -34,9 +34,10 @@ function MyProfile() {
         <Flex h="48px" alignItems="center" justifyContent="space-between">
           <Text
             w="auto"
-            fontSize="2xl"
+            fontSize={["xl", "xl", "xl", "2xl"]}
             fontFamily="system-ui"
             fontWeight="bold"
+            ml={["0px", "0px", "6rem", "5rem"]}
           >
             Meu Perfil
           </Text>
@@ -49,6 +50,7 @@ function MyProfile() {
                 onClick={() => {
                   setActiveTab(1);
                 }}
+                fontSize="md"
               >
                 Visão geral
               </Tab>

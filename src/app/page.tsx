@@ -1,14 +1,11 @@
-import SideBar from "@/components/SideBar";
-import Profile from "@/components/MainBox";
+import Page from "./landingpage/page";
 
 function MyApp() {
-  
-  
   return (
     <div>
-        <SideBar /> 
+      <Page />
     </div>
-  )
+  );
 }
 
 export default MyApp;
