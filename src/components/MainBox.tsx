@@ -1,6 +1,7 @@
 "use client";
 
 import MyProfile from "./myProfile/MyProfile";
+import Dashboard from "@/app/dashboard/page";
 
 import React from "react";
 
@@ -18,7 +19,7 @@ function MainBox() {
         ml={["5%", "5%", "17%", "17%"]}
         color={"slate"}
       >
-        <MyProfile />
+        <Dashboard />
       </Box>
     </div>
   );

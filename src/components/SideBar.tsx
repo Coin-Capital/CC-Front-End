@@ -35,8 +35,11 @@ import {
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 import MainBox from "./MainBox";
+import Link from "next/link";
+import { useState } from "react";
 
 interface LinkItemProps {
+  href: string;
   name: string;
   icon: IconType;
 }
@@ -55,13 +58,15 @@ interface SidebarProps extends BoxProps {
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Dashboard", icon: FiHome },
-  { name: "Investimentos", icon: FiTrendingUp },
-  { name: "Planejamento", icon: FiCompass },
-  { name: "Seja Premium!", icon: FiStar },
+  { name: "Dashboard", icon: FiHome, href: "dashboard" },
+  { name: "Investimentos", icon: FiTrendingUp, href: "investiments" },
+  { name: "Planejamento", icon: FiCompass, href: "planing" },
+  { name: "Seja Premium!", icon: FiStar, href: "premium" },
 ];
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+  const [pageTarget, setTarget] = useState();
+
   return (
     <Box
       transition="3s ease"
@@ -79,7 +84,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       </Flex>
       {LinkItems.map((link) => (
         <NavItem key={link.name} icon={link.icon}>
-          {link.name}
+          <Link href={link.href}>{link.name}</Link>
         </NavItem>
       ))}
     </Box>
@@ -170,7 +175,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                 >
                   <Text fontSize="sm">User</Text>
                   <Text fontSize="xs" color="gray.600">
-                    User
+                    Usuario
                   </Text>
                 </VStack>
                 <Box display={{ base: "none", md: "flex" }}>

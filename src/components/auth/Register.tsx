@@ -1,9 +1,40 @@
 "useClient";
-import React from "react";
+import React, { ChangeEvent, SetStateAction, useState } from "react";
 
 import { Box, Text, Flex, Input, Button } from "@chakra-ui/react";
 
 function Register() {
+  const [userName, setUserName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
+  const handleUserName = (e: ChangeEvent<HTMLInputElement>) => {
+    const newUser = e.target.value;
+    setUserName(newUser);
+  };
+
+  const handleEmail = (e: ChangeEvent<HTMLInputElement>) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+  };
+
+  const handlePassword = (e: ChangeEvent<HTMLInputElement>) => {
+    const newPassword = e.target.value;
+    setEmail(newPassword);
+  };
+
+  const register = () => {
+    console.log(
+      "Usuario enviado",
+      "nome:",
+      userName,
+      "e-mail",
+      email,
+      "senha:",
+      password
+    );
+  };
+
   return (
     <Flex w="100%" justifyContent="center">
       <Flex flexDirection="column">
@@ -21,8 +52,10 @@ function Register() {
             borderBottomColor: "purple",
             _hover: { borderColor: "purple" },
           }}
+          type="text"
           borderRadius="0px"
           _hover={{ borderColor: "black" }}
+          onChange={handleUserName}
         ></Input>
         <Text fontSize="14px" marginTop="32px">
           E-mail
@@ -40,6 +73,8 @@ function Register() {
           }}
           borderRadius="0px"
           _hover={{ borderColor: "black" }}
+          type="text"
+          onChange={handleEmail}
         ></Input>
         <Text fontSize="14px" marginTop="32px">
           Senha
@@ -57,12 +92,15 @@ function Register() {
           }}
           borderRadius="0px"
           _hover={{ borderColor: "black" }}
+          type="password"
+          onChange={handlePassword}
         ></Input>
         <Button
           mt="16px"
           borderRadius="32px"
           backgroundColor="purple.200"
           _hover={{ backgroundColor: "purple", color: "white" }}
+          onClick={register}
         >
           Cadastrar
         </Button>
