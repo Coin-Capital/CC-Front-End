@@ -37,6 +37,7 @@ import { IconType } from "react-icons";
 import MainBox from "./MainBox";
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "@chakra-ui/react";
 
 interface LinkItemProps {
   href: string;
@@ -226,6 +227,7 @@ const SidebarWithHeader = () => {
         {/* Content */}
       </Box>
       <MainBox />
+      <Button ml="155px">test</Button>
     </Box>
   );
 };

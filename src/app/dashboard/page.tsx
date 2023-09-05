@@ -98,6 +98,7 @@ function Dashboard() {
             <Image src="/card.png" w="44px" h="44px" alt="wallet img" />
           </Flex>
         </Flex>
+        <Text>Test: </Text>
       </Flex>
     </Box>
   );
