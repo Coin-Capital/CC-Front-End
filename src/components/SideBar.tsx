@@ -1,5 +1,7 @@
 "use client";
 
+import { create } from "zustand";
+
 import {
   IconButton,
   Avatar,
@@ -34,7 +36,6 @@ import {
   FiChevronDown,
 } from "react-icons/fi";
 import { IconType } from "react-icons";
-import MainBox from "./MainBox";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@chakra-ui/react";
@@ -59,15 +60,13 @@ interface SidebarProps extends BoxProps {
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Dashboard", icon: FiHome, href: "dashboard" },
+  { name: "Dashboard", icon: FiHome, href: "/dashboard" },
   { name: "Investimentos", icon: FiTrendingUp, href: "investiments" },
   { name: "Planejamento", icon: FiCompass, href: "planing" },
   { name: "Seja Premium!", icon: FiStar, href: "premium" },
 ];
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
-  const [pageTarget, setTarget] = useState();
-
   return (
     <Box
       transition="3s ease"
@@ -188,7 +187,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               bg={useColorModeValue("white", "gray.900")}
               borderColor={useColorModeValue("gray.200", "gray.700")}
             >
-              <MenuItem>Perfil</MenuItem>
+              <Link href="/dashboard/myprof">
+                <MenuItem>Perfil</MenuItem>
+              </Link>
               <MenuItem>Configurações</MenuItem>
               <MenuDivider />
               <MenuItem>Sair</MenuItem>
@@ -226,8 +227,6 @@ const SidebarWithHeader = () => {
       <Box ml={{ base: 0, md: 60 }} p="4">
         {/* Content */}
       </Box>
-      <MainBox />
-      <Button ml="155px">test</Button>
     </Box>
   );
 };

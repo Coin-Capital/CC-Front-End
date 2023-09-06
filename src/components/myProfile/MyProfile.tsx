@@ -29,58 +29,68 @@ function MyProfile() {
   };
 
   return (
-    <Box w="100%">
-      <Box>
-        <Flex h="48px" alignItems="center" justifyContent="space-between">
-          <Text
-            w="auto"
-            fontSize={["xl", "xl", "xl", "2xl"]}
-            fontFamily="system-ui"
-            fontWeight="bold"
-            ml={["0px", "0px", "6rem", "5rem"]}
-          >
-            Meu Perfil
-          </Text>
-          <Tabs variant="enclosed" borderRadius="42px" defaultIndex={1}>
-            <TabList borderRadius="32px" h="48px">
-              <Tab
-                borderRadius="32px"
-                textColor="black"
-                _focus={{ backgroundColor: "purple.700", color: "white" }}
-                onClick={() => {
-                  setActiveTab(1);
-                }}
-                fontSize="md"
-              >
-                Visão geral
-              </Tab>
-              <Tab
-                borderRadius="32px"
-                textColor="black"
-                _focus={{ backgroundColor: "purple.700", color: "white" }}
-                onClick={() => {
-                  setActiveTab(2);
-                }}
-              >
-                Meu cadastro
-              </Tab>
-              <Tab
-                borderRadius="32px"
-                textColor="black"
-                _focus={{ backgroundColor: "purple.700", color: "white" }}
-                onClick={() => {
-                  setActiveTab(3);
-                }}
-              >
-                Privacidade
-              </Tab>
-            </TabList>
-          </Tabs>
-        </Flex>
+    <Box
+      display="flex"
+      bg="slate.100"
+      w="screen"
+      h="50rem"
+      mr="5%"
+      ml={["5%", "5%", "17%", "17%"]}
+      color={"slate"}
+    >
+      <Box w="100%">
+        <Box>
+          <Flex h="48px" alignItems="center" justifyContent="space-between">
+            <Text
+              w="auto"
+              fontSize={["xl", "xl", "xl", "2xl"]}
+              fontFamily="system-ui"
+              fontWeight="bold"
+              ml={["0px", "0px", "6rem", "5rem"]}
+            >
+              Meu Perfil
+            </Text>
+            <Tabs variant="enclosed" borderRadius="42px" defaultIndex={1}>
+              <TabList borderRadius="32px" h="48px">
+                <Tab
+                  borderRadius="32px"
+                  textColor="black"
+                  _focus={{ backgroundColor: "purple.700", color: "white" }}
+                  onClick={() => {
+                    setActiveTab(1);
+                  }}
+                  fontSize="md"
+                >
+                  Visão geral
+                </Tab>
+                <Tab
+                  borderRadius="32px"
+                  textColor="black"
+                  _focus={{ backgroundColor: "purple.700", color: "white" }}
+                  onClick={() => {
+                    setActiveTab(2);
+                  }}
+                >
+                  Meu cadastro
+                </Tab>
+                <Tab
+                  borderRadius="32px"
+                  textColor="black"
+                  _focus={{ backgroundColor: "purple.700", color: "white" }}
+                  onClick={() => {
+                    setActiveTab(3);
+                  }}
+                >
+                  Privacidade
+                </Tab>
+              </TabList>
+            </Tabs>
+          </Flex>
+        </Box>
+        {activeTab === 1 && <Overview />}
+        {activeTab === 2 && <MyRegister />}
+        {activeTab === 3 && <Privace />}
       </Box>
-      {activeTab === 1 && <Overview />}
-      {activeTab === 2 && <MyRegister />}
-      {activeTab === 3 && <Privace />}
     </Box>
   );
 }

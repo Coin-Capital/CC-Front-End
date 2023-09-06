@@ -1,24 +1,27 @@
 "use client";
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
-import SideBar from "../../components/SideBar";
 import React from "react";
 
 import { FaWallet } from "react-icons/fa";
 
 function Dashboard() {
   return (
-    <Box>
+    <Box w="100%" ml={["5rem", "", "3rem", "3rem"]}>
       <Box>
         <Text fontWeight="bold" fontSize="2xl">
           Dashboard
         </Text>
       </Box>
-      <Flex>
+      <Flex
+        w="100%"
+        flexDirection={["column", "column", "column", "column", "inherit"]}
+        alignSelf="start"
+      >
         <Flex
           justifyContent="space-between"
           mt="44px"
           backgroundColor="#b57fd4"
-          w="20rem"
+          w="15rem"
           h="7rem"
           borderRadius="26px"
           m="16px"
@@ -39,7 +42,7 @@ function Dashboard() {
           justifyContent="space-between"
           mt="44px"
           backgroundColor="#b57fd4"
-          w="20rem"
+          w="15rem"
           h="7rem"
           borderRadius="26px"
           m="16px"
@@ -60,7 +63,7 @@ function Dashboard() {
           justifyContent="space-between"
           mt="44px"
           backgroundColor="#b57fd4"
-          w="20rem"
+          w="15rem"
           h="7rem"
           borderRadius="26px"
           m="16px"
@@ -81,7 +84,7 @@ function Dashboard() {
           justifyContent="space-between"
           mt="44px"
           backgroundColor="#b57fd4"
-          w="20rem"
+          w="15rem"
           h="7rem"
           borderRadius="26px"
           m="16px"
@@ -98,7 +101,6 @@ function Dashboard() {
             <Image src="/card.png" w="44px" h="44px" alt="wallet img" />
           </Flex>
         </Flex>
-        <Text>Test: </Text>
       </Flex>
     </Box>
   );

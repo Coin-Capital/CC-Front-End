@@ -25,6 +25,8 @@ function MyRegister() {
         pb="32px"
         display="flex"
         flexDirection={["column", "column", "column", "column"]}
+        justifyContent="center"
+        ml={["9rem", "0", "0"]}
       >
         <Box display="flex" flexDirection="column" ml="40px">
           <Text fontSize="xl" fontWeight="bold">
@@ -205,7 +207,7 @@ function MyRegister() {
             <option value="gain">Começar a investir</option>
           </Select>
           <Button
-            alignSelf="end"
+            alignSelf={["center", "center", "end"]}
             backgroundColor="purple"
             color="white"
             borderRadius="32px"
