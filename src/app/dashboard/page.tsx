@@ -1,8 +1,7 @@
 "use client";
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
 import React from "react";
-
-import { FaWallet } from "react-icons/fa";
+import Chart from "@/components/columnGraph/Chart";
 
 function Dashboard() {
   return (
@@ -101,6 +100,9 @@ function Dashboard() {
             <Image src="/card.png" w="44px" h="44px" alt="wallet img" />
           </Flex>
         </Flex>
+      </Flex>
+      <Flex>
+        <Chart />
       </Flex>
     </Box>
   );

@@ -1,11 +1,14 @@
 "use client";
+/**
+ *
+ */
 
 import React, { useState } from "react";
 
 import { Button, Text, Flex, Input } from "@chakra-ui/react";
 
 function Login() {
-  const [focus, setFocus] = useState<number>();
+  const [password, setPassword] = useState<string>();
 
   return (
     <Flex w="100%" justifyContent="center">
@@ -31,6 +34,7 @@ function Login() {
           Senha
         </Text>
         <Input
+          type="password"
           w="auto"
           border="none"
           borderBottom="2px"

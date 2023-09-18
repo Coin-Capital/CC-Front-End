@@ -22,17 +22,15 @@ function Register() {
     const newPassword = e.target.value;
     setEmail(newPassword);
   };
-
+  /**
+   * Register é a função que deve ser enviada para o cadastro do usuario no banco de dados!
+   * @constructor
+   * @param {string} name - {string} nome do usuario
+   * @param {string} email - {string} email do usuario
+   * @param {string} password - {string} senha do usuario
+   */
   const register = () => {
-    console.log(
-      "Usuario enviado",
-      "nome:",
-      userName,
-      "e-mail",
-      email,
-      "senha:",
-      password
-    );
+    const userData = { userName, email, password };
   };
 
   return (
